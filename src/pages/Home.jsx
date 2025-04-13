@@ -20,7 +20,7 @@ function Home() {
 
   const fetchTasks = async () => {
     try {
-      const response = await axios.get('http://localhost:4000/api/tasks');
+      const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/tasks`);
       setTasks(response.data);
     } catch (error) {
       console.error('Error fetching tasks:', error);
@@ -40,9 +40,9 @@ function Home() {
     e.preventDefault();
     try {
       if (editingTaskId) {
-        await axios.put(`http://localhost:4000/api/tasks/${editingTaskId}`, newTask);
+        await axios.put(`${import.meta.env.VITE_BACKEND_URL}/api/tasks/${editingTaskId}`, newTask);
       } else {
-        await axios.post('http://localhost:4000/api/tasks', newTask);
+        await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/tasks`, newTask);
       }
       setNewTask({ title: '', description: '', priority: 'Low' });
       setEditingTaskId(null);
@@ -54,7 +54,7 @@ function Home() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:4000/api/tasks/${id}`);
+      await axios.delete(`${import.meta.env.VITE_BACKEND_URL}/api/tasks/${id}`);
       fetchTasks();
     } catch (error) {
       console.error('Error deleting task:', error);
@@ -72,7 +72,7 @@ function Home() {
 
   const handleToggleCompleted = async (task) => {
     try {
-      await axios.put(`http://localhost:4000/api/tasks/${task._id}`, {
+      await axios.put(`${import.meta.env.VITE_BACKEND_URL}/api/tasks/${task._id}`, {
         ...task,
         completed: !task.completed
       });

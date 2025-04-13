@@ -1,12 +1,37 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+# 📄 `frontend/README.md`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```markdown
+# Task Tracker App - Frontend
 
-## Expanding the ESLint configuration
+This is the frontend client for the Task Tracker App.  
+It is built with **React.js**, **Vite**, **TailwindCSS**, and **Axios**.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features
+
+- User login and registration
+- JWT token stored securely in localStorage
+- Full CRUD (Create, Read, Update, Delete) for tasks
+- Tasks filtered by Completed Status and Priority
+- Responsive mobile-friendly UI
+- Authentication-protected routes
+- Real-time updates to task list
+- Deployed on Vercel
+
+## Technologies Used
+
+- React.js
+- Vite
+- TailwindCSS
+- Axios
+- React Router DOM
+
+## Getting Started Locally
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/YOUR_USERNAME/task-tracker-frontend.git
+cd task-tracker-frontend

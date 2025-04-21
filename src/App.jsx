@@ -34,7 +34,7 @@ function App() {
     <div className="min-h-screen bg-gray-100 p-4">
       <div className="flex justify-between items-center mb-8">
         <img
-          src="src/assets/tasktrackerLogo.png"
+          src="/src/assets/tasktrackerLogo.png"
           alt="Task Tracker Logo"
           className="h-20 object-contain"
         />

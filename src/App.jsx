@@ -33,7 +33,12 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-100 p-4">
       <div className="flex justify-between items-center mb-8">
-        <h1 className="text-3xl font-bold text-blue-600">Task Tracker</h1>
+        <img
+          src="../src/assets/tasktrackerLogo.png"
+          alt="Task Tracker Logo"
+          className="h-20 object-contain"
+        />
+
         {user ? (
           <button onClick={handleLogout} className="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded transition">
             Logout

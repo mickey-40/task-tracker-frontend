@@ -11,7 +11,7 @@ function Register({ setUser }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:4000/api/users/register', {
+      const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/users/register`, {
         name,
         email,
         password
